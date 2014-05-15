@@ -9,16 +9,15 @@ build:
     - script:
         name: build after-steps env
         code: |
-          env
-          echo success
+          env | grep WERCKER
 deploy:
   steps:
     - script:
         name: deploy steps env
         code: |
-          env
-          exit 0
+          env | grep WERCKER
   after-steps:
     - script:
         name: deploy after-steps env
-        code: env || true
+        code: |
+          env | grep WERCKER
