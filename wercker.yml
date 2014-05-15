@@ -4,7 +4,7 @@ build:
     - script:
         name: build steps env
         code: |
-          env
+          env | grep WERCKER
   after-steps:
     - script:
         name: build after-steps env
