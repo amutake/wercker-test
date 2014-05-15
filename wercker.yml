@@ -2,18 +2,18 @@ box: wercker/default
 build:
   steps:
     - script:
-        name: env
-        code: env
+        name: build steps env
+        code: env || true
   after-steps:
     - script:
-        name: env
-        code: env
+        name: build after-steps env
+        code: env || true
 deploy:
   steps:
     - script:
-        name: env
-        code: env
+        name: deploy steps env
+        code: env || true
   after-steps:
     - script:
-        name: env
-        code: env
+        name: deploy after-steps env
+        code: env || true
