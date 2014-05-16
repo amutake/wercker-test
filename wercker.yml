@@ -1,23 +1,6 @@
-box: wercker/default
+box: amutake/haskell-platform
 build:
   steps:
     - script:
-        name: build steps env
-        code: |
-          env | grep WERCKER
-  after-steps:
-    - script:
-        name: build after-steps env
-        code: |
-          env | grep WERCKER
-deploy:
-  steps:
-    - script:
-        name: deploy steps env
-        code: |
-          env | grep WERCKER
-  after-steps:
-    - script:
-        name: deploy after-steps env
-        code: |
-          env | grep WERCKER
+        name: cabal install
+        code: cabal install
