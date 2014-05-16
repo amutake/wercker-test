@@ -3,4 +3,6 @@ build:
   steps:
     - script:
         name: cabal install
-        code: cabal install
+        code: |
+          cabal update
+          cabal install
