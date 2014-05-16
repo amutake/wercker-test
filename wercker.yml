@@ -1,4 +1,4 @@
-box: amutake/haskell-platform
+box: amutake/haskell
 build:
   steps:
     - script:
