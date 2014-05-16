@@ -1,10 +1,1 @@
 box: amutake/haskell
-build:
-  steps:
-    - script:
-        name: cabal install
-        code: |
-          echo $PATH
-          which cabal
-          cabal update
-          cabal install
