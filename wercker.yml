@@ -4,5 +4,7 @@ build:
     - script:
         name: cabal install
         code: |
+          echo $PATH
+          which cabal
           cabal update
           cabal install
