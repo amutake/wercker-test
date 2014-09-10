@@ -1,1 +1,29 @@
-box: amutake/haskell
+box: amutake/haskell-platform
+build:
+  steps:
+    - script:
+        name: haskell-platform
+        code: |
+          ghc --version
+          cabal --version
+          ghc-pkg list
+    - script:
+        name: build steps env
+        code: |
+          env | grep WERCKER
+  after-steps:
+    - script:
+        name: build after-steps env
+        code: |
+          env | grep WERCKER
+deploy:
+  steps:
+    - script:
+        name: deploy steps env
+        code: |
+          env | grep WERCKER
+  after-steps:
+    - script:
+        name: deploy after-steps env
+        code: |
+          env | grep WERCKER
